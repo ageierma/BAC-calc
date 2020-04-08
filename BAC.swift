@@ -10,9 +10,11 @@ print ("Enter your Weight")
 let weight= readline()
 print ("Enter Amount of Alchohol Consumed")
 let amount = readline()
-print ("Enter Time passed since drinking")
+print ("Enter Time in hours passed since drinking")
 let time = readline()
 //time in hours
+print("Please Enter Your gender")
+let gender = readline()
 }
 class BACFormula {
 let index : Int
@@ -20,16 +22,25 @@ let index : Int
 init() {
     index =0
 }
-func WomCalc {
+func WomCalc(amount: Int,weight: Int,time: Int)-> Int {
     index = ((amount*5.14)/weight*.66)-.015*time
+    let WomBAC = "Your BAC is " + index 
+    return womBAC
 }
-func MenCalc {
- index = ((amount*5.14)/weight*.73)-.015*time
+func MenCalc(amount: Int, weight:Int, time:Int)->Int {
+    index = ((amount*5.14)/weight*.73)-.015*time
+    let menBAC = "Your BAC is " + index
+    return menBAC
 }
 
 }
 class Output {
-    //if statment 
-    //if male execute MenCalc function
-    //if Female execute WomCalc function
+    switch gender {
+        case "male":
+        print(menBAC)
+        case "female":
+        print(womBAC)
+        default:
+        print ("Please specify male or female")
+    }
 }
