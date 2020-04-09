@@ -1,26 +1,30 @@
 import Foundation
 import UIkit
-
+/////USE TEST1 SWIFT FILE INSTEAD THAT ONE IS FULLY UPDATED WITH TESTS THIS ONE IS NOT
+///////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////////
+/////////////////////////////////////
 class InputReqs {
 print("Enter Your Height")
-let height = readline()
+let height = readLine()
 print ("Enter your Age")
-let age = readline()
+let age = readLine()
 print ("Enter your Weight")
-let weight= readline()
+let weight = readLine()
 print ("Enter Amount of Alchohol Consumed")
-let amount = readline()
+let amount = readLine()
 print ("Enter Time in hours passed since drinking")
-let time = readline()
+let time = readLine()
 //time in hours
 print("Please Enter Your gender")
-let gender = readline()
+let gender = readLine()
 }
 class BACFormula {
 let index : Int
 
 init() {
-    index =0
+    index = 0
 }
 func WomCalc(amount: Int,weight: Int,time: Int)-> Int {
     index = ((amount*5.14)/weight*.66)-.015*time
